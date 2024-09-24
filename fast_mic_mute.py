@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 print(f'''
 *********
-* Running: Now visit http://{socket.gethostbyname(socket.gethostname())}:8000 from your phone :) 
+* Running: Now visit http://{socket.gethostbyname(socket.gethostname())}:8000 from your phone :)
 *********
 ''')
 
@@ -31,20 +31,20 @@ def make_html(dest, color):
         <style>
         a {{
             background-color:{color};
-            width:100%;
-            margin-left:0;
-            margin-right:0;
-            padding-left:0;
-            padding-right:0;
-            display:block;
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
             text-align:center;
-            height:100%;
             color:white;
             text-decoration: none;
             font-family: sans-serif;
+            font-size: calc(5vw + 5vh);
         }}
         </style>
-        <body style='margin:0px;'>
+        </head>
+        <body style='margin:0; padding:0;'>
         <a href='/{dest}'>Click to {dest}</a>
         </body>
     </html>
